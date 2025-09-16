@@ -11,4 +11,21 @@ body {
   main {
     flex-direction: column;
   }
+  .movie-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 1rem;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .movie-card {
+    max-width: 30rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
