@@ -3,7 +3,7 @@ import logo from '../assets/asteri-cinema-logo2.png';
 function Header() {
   return (
     <header className="bg-transparent text-white p-4 flex flex-row items-center gap-4 justify-between">
-      <img src={logo} alt="Asteri Cinema Logo" className="w-74"/>
+      <img src={logo} alt="Asteri Cinema Logo" className="w-86"/>
       {/* <h1>Asteri Cinema</h1> */}
       <nav>
         <ul className="flex flex-row gap-8">

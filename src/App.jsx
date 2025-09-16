@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Main from "./components/Main";
+import Home from "./pages/Home";
 function App() {
   const [movies, setMovies] = useState([]);
 
@@ -17,7 +17,7 @@ function App() {
     <>
       <div className="flex min-h-screen flex-col bg-[url('./assets/star-sky2.jpg')] bg-cover bg-center">
         <Header />
-        <Main movies={movies} />
+        <Home movies={movies} />
         <Footer />
       </div>
     </>
