@@ -4,23 +4,35 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import About from "./pages/About";
+
 function App() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    fetch("https://cinema-api.henrybergstrom.com/api/v1/movies")
-      .then(res => res.json())
-      .then(data => setMovies(data))
-  }, []);
-
+ 
   return (
-    <>
-      <div className="flex min-h-screen flex-col bg-[url('./assets/star-sky2.jpg')] bg-cover bg-center">
+    
+     <Router>
+      <div className="flex flex-1 min-h-screen flex-col bg-[url('./assets/star-sky2.jpg')] bg-cover bg-center">
         <Header />
-        <Home movies={movies} />
+
+        <Routes>
+          {/* Startpage */}
+
+          <Route path="/" element={<Home />} />
+
+          {/* About page */}
+
+          <Route path="/about" element={<About />} />
+
+          {/* Page Not Found */}
+          <Route path="*" element={<div className="flex-1 flex items-center justify-center text-white text-3xl">
+            PAGE NOT FOUND
+          </div>} />
+
+        </Routes>
+
         <Footer />
       </div>
-    </>
+    </Router>
   );
 }
 
