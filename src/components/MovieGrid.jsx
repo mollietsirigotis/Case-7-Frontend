@@ -24,7 +24,7 @@ function MovieGrid({ movies }) {
               <div className="">
                 <h2 className="text-l font-bold">{movie.title}</h2>
                 <p className="movie-info text-xs text-gray-400">
-                  {movie.genre} · {movie.releaseDate}
+                  {movie.genre} · {new Date(movie.releaseDate).toLocaleDateString()}
                 </p>
                 <p className="movie-description text-xs pt-2">{movie.description}</p>
                 <p className="movie-info text-xs text-gray-400">
