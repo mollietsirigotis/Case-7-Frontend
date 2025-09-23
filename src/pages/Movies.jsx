@@ -11,9 +11,10 @@ function Movies() {
   }, []);
 
   return (
-    <>
+    <div className="flex-1 text-white flex flex-col items-center justify-center">
+      <h1 className="text-white font-bold text-3xl mb-6">NOW SHOWING</h1>
       <MovieGrid movies={movies} />
-    </>
+    </div>
   );
 }
 

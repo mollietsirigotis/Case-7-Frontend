@@ -1,14 +1,16 @@
 import icon from "../assets/star-icon.png";
 import { useEffect, useState } from "react";
 import MovieGrid from "../components/MovieGrid";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://cinema-api.henrybergstrom.com/api/v1/movies")
-      .then(res => res.json())
-      .then(data => setMovies(data));
+      .then((res) => res.json())
+      .then((data) => setMovies(data));
   }, []);
 
   return (
@@ -22,14 +24,17 @@ function Home() {
           indie gems in a cozy and inviting atmosphere.
         </p>
         {/* Our movies button */}
-        <button className="mt-6 mb-6 bg-white text-black font-bold py-2 px-4 rounded">
+        <button
+          onClick={() => navigate("/movies")}
+          className="our-movies-button mt-6 mb-6 bg-white text-black font-bold py-2 px-4 rounded"
+        >
           OUR MOVIES
         </button>
       </div>
       <img src={icon} alt="Asteri Cinema Icon" className="w-16" />
+      <h2 className="font-bold text-2xl mt-12">NOW SHOWING</h2>
 
       <MovieGrid movies={movies} />
-
     </main>
   );
 }

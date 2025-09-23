@@ -5,11 +5,31 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: black;
-};
+}
 
 .active-link {
-  color: #FB2B37;
+  color: #fb2b37;
   font-weight: 600;
+}
+.our-movies-button:hover {
+  background-color: #fb2b37;
+  transition: background-color 0.2s ease;
+}
+.buy-tickets-button:hover {
+  color: white;
+  transition: background-color 0.2s ease;
+}
+.view-calendar-button:hover {
+  background-color: #fb2b37;
+  transition: background-color 0.2s ease;
+}
+.yesterday-button:hover {
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+.tomorrow-button:hover {
+  background-color: white;
+  transition: background-color 0.2s ease;
 }
 
 @media screen and (max-width: 1024px) {
@@ -34,10 +54,10 @@ body {
     max-width: 30rem;
   }
   .movie-info {
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
   .movie-description {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   header {
