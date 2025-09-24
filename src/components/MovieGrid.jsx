@@ -29,7 +29,7 @@ function MovieGrid({ movies }) {
                 <p className="movie-info text-xs text-gray-400">
                   {movie.genre} ·{" "}
                   {new Date(movie.releaseDate).toLocaleDateString("sv-SE", {
-                    year: "numeric"
+                    year: "numeric",
                   })}
                 </p>
                 <p className="movie-description text-xs mt-1">
@@ -41,8 +41,14 @@ function MovieGrid({ movies }) {
               </div>
               <div>
                 {/* To the specific booking page for the movie you clicked on */}
-                <button className="buy-tickets-button mb-6 bg-red-500 text-black font-bold p-2 rounded">
-                  BUY TICKETS
+                <button
+                  onClick={() => {
+                    navigate(`/movies/${movie._id}/shows`);
+                    window.scrollTo(0, 0);
+                  }}
+                  className="buy-tickets-button mb-6 bg-red-500 text-black font-bold p-2 rounded"
+                >
+                  VIEW SHOWS
                 </button>
               </div>
             </div>

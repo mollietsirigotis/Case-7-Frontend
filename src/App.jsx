@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Movies from "./pages/Movies";
 import Calendar from "./pages/Calendar";
+import MovieShows from "./pages/MovieShows";
 
 function App() {
  
@@ -30,6 +31,8 @@ function App() {
           </div>} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/calendar" element={<Calendar />} />
+          <Route path="/movies/:id/shows" element={<MovieShows />} />
+
 
         </Routes>
 
