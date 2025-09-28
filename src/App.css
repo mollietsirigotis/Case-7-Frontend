@@ -59,6 +59,15 @@ body {
   .movie-description {
     font-size: 0.8rem;
   }
+  .movie-shows-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .movie-shows-info img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 16rem;
+  }
 
   header {
     flex-direction: column;

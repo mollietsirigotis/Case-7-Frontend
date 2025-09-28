@@ -20,12 +20,6 @@ function Header() {
           MOVIES
         </NavLink>
         <NavLink
-          to="/calendar"
-          className={({ isActive }) => (isActive ? "active-link" : "link")}
-        >
-          CALENDAR
-        </NavLink>
-        <NavLink
           to="/about"
           className={({ isActive }) => (isActive ? "active-link" : "link")}
         >

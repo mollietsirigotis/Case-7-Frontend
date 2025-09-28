@@ -10,6 +10,9 @@ function Movies() {
       .then((data) => setMovies(data));
   }, []);
 
+  if (!movies) {
+    return <div className="text-white">Loading...</div>;
+  }
   return (
     <div className="flex-1 text-white flex flex-col items-center justify-center">
       <h1 className="text-white font-bold text-3xl mb-6">NOW SHOWING</h1>
