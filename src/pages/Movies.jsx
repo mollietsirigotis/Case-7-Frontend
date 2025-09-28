@@ -10,7 +10,7 @@ function Movies() {
       .then((data) => setMovies(data));
   }, []);
 
-  if (!movies) {
+  if (movies.length === 0) {
     return <div className="text-white">Loading...</div>;
   }
   return (
